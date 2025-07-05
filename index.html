@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happiest Birthday Shreya 💕</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+<script src="https://www.youtube.com/iframe_api"></script>
+
+</head>
+<body>
+
+
+  <audio id="bg-music" src="assets/audio/romantic.mp3" loop autoplay></audio>
+  <div id="floating-hearts"></div>
+
+  <section id="hero" class="section">
+    <img src="assets/images/herphoto.jpg" class="hero-img" alt="Her Photo">
+    <h1>Happy Birthday My Perfect One ♥️ 🎉</h1>
+    <p>Let’s go on a little journey together 💖</p>
+    <button onclick="startExperience()">Start</button>
+  </section>
+
+<section id="messages" class="section hidden">
+  <div class="scroll-wrapper">
+    <img src="assets/images/scroll.png" alt="Vintage Scroll" class="scroll-bg">
+    <div class="scroll-text-container">
+      <div id="typed-message" class="scroll-text"></div>
+    </div>
+  </div>
+  <button onclick="goToSection('choice')">Next</button>
+
+</section>
+
+
+  <!--<section id="messages" class="section hidden">
+    <div id="typed-message" class="typing"></div>
+    <button onclick="showChoice()">Next</button>
+  </section>  -->
+
+  <section id="choice" class="section hidden">
+    <h2>What would you like to explore first?</h2>
+    <button onclick="goToSection('gallery')">📸 Gallery</button>
+    <button onclick="goToSection('game')">🎮 Game</button>
+  </section>
+
+  <section id="gallery" class="section hidden">
+  <h2>My Gallery is blessed</h2>
+  <div id="flipbook-gallery">
+    <img id="flipbook-image" class="flipbook-img" src="" alt="Gallery Image">
+    <p id="flipbook-caption" class="flipbook-caption"></p>
+    <button onclick="showNextFlip()">Next Photo ➡️</button>
+  </div>
+  <button onclick="goToSection('quiz')">Next ➡️</button>
+</section>
+
+
+ <!--<section id="gallery" class="section hidden">
+    <h2>What i look at daily</h2>
+    <div id="gallery-carousel"></div>
+    <button onclick="goToSection('quiz')">Next ➡️</button>
+  </section> -->
+
+  <section id="quiz" class="section hidden">
+    <h2>Quiz Time 💡</h2>
+    <div id="quiz-container"></div>
+   
+  </section>
+
+  <section id="game" class="section hidden">
+    <h2>Catch the Hearts!</h2>
+    <canvas id="gameCanvas" width="300" height="400"></canvas>
+    <p id="gameScore"></p>
+    <button onclick="goToSection('chat')">Next ➡️</button>
+  </section>
+
+  <section id="chat" class="section hidden">
+    <h2>Memories</h2>
+    <div id="chat-screenshots"></div>
+    <button onclick="goToSection('video-section')">Next ➡️</button>
+
+  </section>
+<!-- 💞 Video Speech Section -->
+<section id="video-section" class="section hidden">
+  <h2>This one's from me... 🎥</h2>
+  <p style="font-style: italic; color: #555;">(Hit play when you're ready. This one's from the heart.)</p>
+  <div style="position:relative; padding-top:56.25%; margin-top: 1rem;">
+    <iframe 
+      id="youtube-video"
+      src="https://www.youtube.com/embed/YOUR_VIDEO_ID?rel=0&modestbranding=1&enablejsapi=1" 
+      style="position:absolute; top:0; left:0; width:100%; height:100%; border:none;" 
+      allowfullscreen 
+      allow="autoplay; encrypted-media">
+    </iframe>
+  </div>
+  <button onclick="goToSection('message-wall')">Next ➡️</button>
+
+</section>
+
+  <section id="message-wall" class="section hidden">
+    <h2>Leave Me a Message 💬</h2>
+    <textarea id="userMessage" placeholder="Type something sweet..."></textarea>
+    <button onclick="animateUserMessage()">Send</button>
+    <div id="animatedUserMessage"></div>
+    <button onclick="goToSection('countdown')">Final Surprise ➡️</button>
+  </section>
+
+  <section id="countdown" class="section hidden">
+    <h2>Close your eyes and count to 10... 🎁</h2>
+    <div id="countdown-timer">10</div>
+    <div id="finalMessage" class="hidden">Now open them... 💝</div>
+    <h1 id="birthdayBanner" class="hidden">🎉 Happy Birthday Shreya! 🎉</h1>
+    <img id="birthdayAvatar" class="hidden" src="assets/images/avatar.png" alt="avatar" />
+
+
+  </section>
+  
+
+  <script src="js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+</body>
+</html>
