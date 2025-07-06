@@ -6,7 +6,6 @@
   <title>Happiest Birthday Shreya 💕</title>
   <link rel="stylesheet" href="css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-<script src="https://www.youtube.com/iframe_api"></script>
 
 </head>
 <body>
@@ -33,12 +32,6 @@
 
 </section>
 
-
-  <!--<section id="messages" class="section hidden">
-    <div id="typed-message" class="typing"></div>
-    <button onclick="showChoice()">Next</button>
-  </section>  -->
-
   <section id="choice" class="section hidden">
     <h2>What would you like to explore first?</h2>
     <button onclick="goToSection('gallery')">📸 Gallery</button>
@@ -54,13 +47,6 @@
   </div>
   <button onclick="goToSection('quiz')">Next ➡️</button>
 </section>
-
-
- <!--<section id="gallery" class="section hidden">
-    <h2>What i look at daily</h2>
-    <div id="gallery-carousel"></div>
-    <button onclick="goToSection('quiz')">Next ➡️</button>
-  </section> -->
 
   <section id="quiz" class="section hidden">
     <h2>Quiz Time 💡</h2>
@@ -86,13 +72,9 @@
   <h2>This one's from me... 🎥</h2>
   <p style="font-style: italic; color: #555;">(Hit play when you're ready. This one's from the heart.)</p>
   <div style="position:relative; padding-top:56.25%; margin-top: 1rem;">
-    <iframe 
-      id="youtube-video"
-      src="https://www.youtube.com/embed/YOUR_VIDEO_ID?rel=0&modestbranding=1&enablejsapi=1" 
-      style="position:absolute; top:0; left:0; width:100%; height:100%; border:none;" 
-      allowfullscreen 
-      allow="autoplay; encrypted-media">
-    </iframe>
+    <video id="birthday-video" controls style="width:100%; max-width:720px; margin-top: 1rem;">
+    <source src="assets/video/birthday-video.mp4" type="video/mp4">
+  </video>
   </div>
   <button onclick="goToSection('message-wall')">Next ➡️</button>
 
