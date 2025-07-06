@@ -578,6 +578,7 @@ function goToSection(id) {
   if (id === 'countdown') startCountdown();
   if (id === 'game') startGameLoop();
   const music = document.getElementById("bg-music");
+   const video = document.getElementById("birthday-video");
   if (id === 'video-section') {
     scrollToVideo();
     if (music && !music.paused) music.pause();
@@ -586,14 +587,14 @@ function goToSection(id) {
   }
 }
 function scrollToVideo() {
-  const vid = document.getElementById("youtube-video");
+  const vid = document.getElementById("birthday-video");
   if (vid) {
     setTimeout(() => {
       vid.scrollIntoView({ behavior: "smooth", block: "start" });
     }, 500);
   }
 }
-let player;
+/*let player;
 function onYouTubeIframeAPIReady() {
   player = new YT.Player('youtube-video', {
     events: {
@@ -607,6 +608,14 @@ function onPlayerStateChange(event) {
     setTimeout(() => goToSection('message-wall'), 2000); // move to next section after 2s
   }
 }
+*/
 
+document.getElementById("birthday-video").addEventListener("ended", function () {
+  const music = document.getElementById("bg-music");
+  if (music && music.paused) {
+    music.play().catch(() => {});
+  }
+  setTimeout(() => goToSection("message-wall"), 2000);
+});
 
 
